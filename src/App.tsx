@@ -3,6 +3,7 @@ import './App.css';
 import { Input } from './components/input/Input';
 import { HeaderTable } from './components/table/HeaderTable';
 import { Row } from './components/table/Row';
+import { Pagination } from './components/pagnation/Pagination';
 
 type ResponceType = {
   id: number
@@ -33,9 +34,9 @@ const App = () => {
         <tbody>
         <HeaderTable/>
         {data.map( row => <Row key={row.id} id={row.id} title={row.title} body={row.body}/>)}
-        </tbody>
-        
+        </tbody>       
       </table>
+      <Pagination len={100}/>
     </div>
   );
 }

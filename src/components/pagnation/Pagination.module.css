@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 35px;
+}
+
+.container span {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: color .3s ease-in-out;
+}
+
+.container > span:hover {
+    cursor: pointer;
+    color: var(--second-text-color);
+    transition: color .3s ease-in-out;
+}
+
+.countBody {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.countBody span {
+    font-size: 18px;
+}
