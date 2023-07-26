@@ -29,18 +29,28 @@ button {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
-  --primary-dark-coor: #474955;
+  --primary-dark-color: #474955;
   --second-dark-color: #5A5C66;
   --text-color: #474955;
   --second-text-color: #B2B7BF;
+  --light-gray: #E3E6EC;
+  --light-color: #ffffff;
 }
 
 
 .container {
-  max-width: 1234px;
+  max-width: 1078px;
   margin: 0 auto;
   min-height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding-top: 0 78px 78px 0;
+  margin-top: 23px;
+}
+
+.table {
+  margin-top: 15px;
+  border-collapse: inherit;
+  border-spacing: 0;
 }

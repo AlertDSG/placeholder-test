@@ -1,0 +1,47 @@
+.header {
+    background: var(--primary-dark-color);
+    height: 52px;
+    width: 100%;
+    
+}
+
+.header th {
+    color: var(--light-color);
+    border-left: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 137.7%;
+}
+.header th:first-child {
+    width: 10%;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.rowBody td:first-child {
+    text-align: center;
+}
+
+.rowBody td {
+    font-size: 13px;
+    line-height: 147.7%;
+    font-weight: 500;
+    color: var(--text-color);
+    border-left: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.rowBody td:last-child {
+    border-right: 1px solid var(--light-gray); 
+    width: 40%;
+}
+
+.rowBody td div {
+    text-align: left;
+    margin: 15px 12px 14px 11px;
+}
