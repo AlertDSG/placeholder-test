@@ -1,9 +1,10 @@
 import './App.css';
+import { Input } from './components/input/Input';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      init
+    <div className="container">
+      <Input placeholder='Поиск'/>
     </div>
   );
 }
