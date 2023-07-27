@@ -18,6 +18,10 @@
     transition: color .3s ease-in-out;
 }
 
+.container .activePage {
+    color: var(--active-page)
+}
+
 .countBody {
     display: flex;
     gap: 5px;

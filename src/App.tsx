@@ -1,42 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import './App.css';
-import { Input } from './components/input/Input';
-import { HeaderTable } from './components/table/HeaderTable';
-import { Row } from './components/table/Row';
-import { Pagination } from './components/pagnation/Pagination';
-
-type ResponceType = {
-  id: number
-  title: string
-  body: string
-  userId: number
-}
+import { fetchPosts } from './store/page-reducer';
+import { useAppDispatch, useAppSelector } from './common/hooks';
+import { RoutsProject } from './components/routing/RoutsProject';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
-  const [data, setData] = useState<ResponceType[]>([])
+  const dispatch = useAppDispatch();
+  const actualPage = useAppSelector(state => state.pages.page);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    (async () => {
-    const responce = await fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'GET',
-      })
-      let data = await responce.json()
-      data.length = 10
-      setData(data)
-    })()
-    
-  }, [])
+    dispatch(fetchPosts());
+    navigate(`/${actualPage}`);
+  }, [actualPage, dispatch, navigate]);
 
   return (
     <div className="container">
-      <Input placeholder='Поиск'/>
-      <table className='table'>
-        <tbody>
-        <HeaderTable/>
-        {data.map( row => <Row key={row.id} id={row.id} title={row.title} body={row.body}/>)}
-        </tbody>       
-      </table>
-      <Pagination len={100}/>
+      <RoutsProject/>
     </div>
   );
 }

@@ -35,6 +35,7 @@ button {
   --second-text-color: #B2B7BF;
   --light-gray: #E3E6EC;
   --light-color: #ffffff;
+  --active-page: #7EBC3C;
 }
 
 
@@ -46,12 +47,6 @@ button {
   display: flex;
   flex-direction: column;
   padding: 23px 10px 0 10px;
-}
-
-.table {
-  margin-top: 15px;
-  border-collapse: inherit;
-  border-spacing: 0;
 }
 
 @media (min-width: 950px) {

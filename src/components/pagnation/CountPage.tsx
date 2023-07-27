@@ -1,11 +1,10 @@
-import React from 'react';
-
 type PropsType = {
-    page: number
+    page: number,
+    className?: string,
 }
 
-export const CountPage = ({page}: PropsType) => {
+export const CountPage = ({page, className}: PropsType) => {
     return (
-        <span>{page}</span>
+        <span className={className}>{page}</span>
     );
 };

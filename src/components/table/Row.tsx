@@ -1,16 +1,13 @@
-import React from 'react';
 import styles from './Table.module.css';
 
 type PropsType = {
-    userId?: number
-    id: number
-    title: string
-    body: string
-
+    userId?: number,
+    id: number,
+    title: string,
+    body: string,
 }
 
 export const Row = ({id, title, body}: PropsType) => {
-
     return (
         <tr className={styles.rowBody}>
             <td>{id}</td>
