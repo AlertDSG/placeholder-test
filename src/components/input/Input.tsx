@@ -26,7 +26,8 @@ export const Input = ({placeholder}: PropsType) => {
         if (debounce) {
             dispatch(searchItems({value}));
         } 
-    }, [debounce, dispatch, value]);
+        // eslint-disable-next-line
+    }, [debounce]);
     
     return (
         <div className={styles.container}>

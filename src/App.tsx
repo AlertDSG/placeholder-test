@@ -13,7 +13,8 @@ const App = () => {
   useEffect(() => {
     dispatch(fetchPosts());
     navigate(`/${actualPage}`);
-  }, [actualPage, dispatch, navigate]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className="container">
